@@ -612,6 +612,7 @@ footer {
 
 .footer-container {
   display: flex;
+  justify-content: space-between;
 }
 
 .footer-contacts {
@@ -619,6 +620,7 @@ footer {
 }
 
 .joinus {
+  padding-right: 93px;
 }
 
 .footer-title {
@@ -655,7 +657,6 @@ footer address li:not(:last-child) {
 }
 
 .subscribe {
-  margin-left: 93px;
 }
 
 .footer-form-wrapper {
