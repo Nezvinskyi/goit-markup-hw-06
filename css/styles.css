@@ -319,11 +319,11 @@ header address li:not(:last-child) {
 
 .form-label {
   display: block;
-  /* margin-bottom: 4px; */
   font-size: 12px;
   line-height: 1.67;
   letter-spacing: 0.01em;
   color: var(--add-text-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-input {
@@ -345,14 +345,14 @@ header address li:not(:last-child) {
   border: 1px solid var(--accent-color);
 }
 
-.form-input:focus .form-icon {
-  fill: var(--accent-color);
-}
-
 .form-icon {
   position: absolute;
   top: 30px;
   left: 12px;
+}
+
+.form-label:focus-within {
+  fill: var(--accent-color);
 }
 
 textarea.form-input {
@@ -591,7 +591,7 @@ textarea.form-input {
 
   transition-property: fill, border;
   transition-duration: 250ms;
-  /* transition-delay: 250ms; */
+
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
