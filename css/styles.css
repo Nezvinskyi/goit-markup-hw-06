@@ -345,9 +345,12 @@ header address li:not(:last-child) {
   border: 1px solid var(--accent-color);
 }
 
+.form-input:focus .form-icon {
+  fill: var(--accent-color);
+}
+
 .form-icon {
   position: absolute;
-  /* display: block; */
   top: 30px;
   left: 12px;
 }
@@ -370,17 +373,48 @@ textarea.form-input {
 .checkbox {
 }
 .checkbox-input {
-  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 .checkbox-label {
-  display: inline-flex;
-  align-self: center;
-  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--add-text-color);
+}
+
+.checkbox-custom-box {
+  display: inline-flex;
+  width: 1em;
+  height: 1em;
+  background-image: url(../images/icon-check-off.svg);
+
+  background-size: 12px 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.checkbox-text {
+  display: inline-flex;
+}
+
+.checkbox-input:checked + .checkbox-custom-box {
+  background-image: url(../images/icon-check-on.svg);
+  background-position: center;
+  cursor: pointer;
+  background-repeat: no-repeat;
+}
+
+.checkbox-input:focus + .checkbox-custom-box {
+  box-sizing: content-box;
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
 }
 
 .checkbox-label a {
@@ -392,7 +426,7 @@ textarea.form-input {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  margin: 20px auto 0px auto;
   width: 200px;
   height: 50px;
 
