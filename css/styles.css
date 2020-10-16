@@ -420,6 +420,7 @@ textarea.form-input {
 .checkbox-label a {
   color: var(--accent-color);
   text-decoration: underline;
+  text-decoration-skip-ink: none;
 }
 
 .form-btn {
